@@ -141,13 +141,21 @@ section,
 .nav__item {
     padding-block: 0.5em;
     font-size: rem;
+    transition: 0.175s ease;
+    bottom: 0;
+    /* bottom has to be set to 0 for the transition to work */
+}
+.nav__item:hover,
+.nav__item:focus {
+    position: relative;
+    bottom: 2px;
 }
 
 .nav__link {
     text-transform: uppercase;
     text-decoration: none;
     color: white;
-    transition: opacity 0.175s ease;
+    transition: 0.175s ease;
 }
 
 .nav__link:hover,
@@ -182,12 +190,15 @@ section,
     font: 1.2rem "Oswald", sans-serif;
     color: white;
     margin-bottom: 1em;
-    transition: opacity 0.175s ease;
+    transition: 0.175s ease-in-out;
+    bottom: 0;
 }
 
 .hero__btn:hover,
 .hero__btn:focus {
     opacity: 0.5;
+    position: relative;
+    bottom: 3px;
 }
 
 .second-section {
